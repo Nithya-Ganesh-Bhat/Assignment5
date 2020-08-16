@@ -26,20 +26,22 @@ The repetitons indicate the number of times the function has to be calculated.
 15) temp_converter must have one named argument
 16) speed_converter must have two named arguments
 17) squared_power_list must have two named arguments
-18) polygon_area must have sides as named argument
-19) polygon_area named argument must be an integer between 3 and 6
-20) polygon_area positional argument must be a number greater than 0
-21) Testing polygon_area for equilateral triangle, square, regular pentagon and regular hexagon
-22) temp_converter must have temp_given_in as named argument
-23) temp_converter named argument must be a string ‘f’ or ‘F’ or ‘c’ or ‘C’
-24) temp_converter positional argument must be a number greater than absolute zero temperature (0K or -273.15°C or -459.67°F)
-25) Testing temp_converter for Celsius to Fahrenheit and Fahrenheit to Celsius conversion
-26) speed_converter must have dist and time as named argument
-27) speed_converter named argument must be a string (dist can be km or m or ft or yrd and time can be ms or s or min or hr or day)
-28) speed_converter positional argument must be a number greater than 0
-29) Testing speed_converter for speed conversion
-30) squared_power_list must have start and end as named argument
-31) squared_power_list named argument must be numbers
-32) squared_power_list positional argument must be a number
-33) Testing squared_power_list for list
-34) squared_power_list start must be lesser than end
+18) print must have two named arguments
+19) polygon_area must have sides as named argument
+20) polygon_area named argument must be an integer between 3 and 6
+21) polygon_area positional argument must be a number greater than 0
+22) Testing polygon_area for equilateral triangle, square, regular pentagon and regular hexagon
+23) temp_converter must have temp_given_in as named argument
+24) temp_converter named argument must be a string ‘f’ or ‘F’ or ‘c’ or ‘C’
+25) temp_converter positional argument must be a number greater than absolute zero temperature (0K or -273.15°C or -459.67°F)
+26) Testing temp_converter for Celsius to Fahrenheit and Fahrenheit to Celsius conversion
+27) speed_converter must have dist and time as named argument
+28) speed_converter named argument must be a string (dist can be km or m or ft or yrd and time can be ms or s or min or hr or day)
+29) speed_converter positional argument must be a number greater than 0
+30) Testing speed_converter for speed conversion
+31) print must have sep and end as named argument
+32) squared_power_list must have start and end as named argument
+33) squared_power_list named argument must be numbers
+34) squared_power_list positional argument must be a number
+35) Testing squared_power_list for list
+36) squared_power_list start must be lesser than end
