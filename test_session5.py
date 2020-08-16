@@ -206,6 +206,16 @@ def test_speed_converter_calculation():
         assert (session5.speed_converter(speed, 'm', 's', 10)) == round(speed*1000/3600,2), f"Your program returned wrong km/hr to m/s conversion"
         assert (session5.speed_converter(speed, 'ft', 'min', 10)) == round(speed*3281/60,2), f"Your program returned wrong km/hr to ft/min conversion"
 
+def test_print_named_arg_key():
+    with pytest.raises(Exception):
+            session5.time_it(session5.print, 1,2,3, sep='-', repetitons = 10), 'print must have named arguments - sep and end - indicating separator and end'
+    with pytest.raises(Exception):
+            session5.time_it(session5.print, 1,2,3, time=' ***\n', repetitons = 10), 'print must have named arguments - sep and end - indicating separator and end'
+    with pytest.raises(Exception):
+            session5.time_it(session5.print, 1,2,3, se='-', e=' ***\n', repetitons = 10), 'print must have named arguments - sep and end - indicating separator and end'
+    with pytest.raises(Exception):
+            session5.time_it(session5.print, 1,2,3, '-',' ***\n', repetitons = 10), 'print must have named arguments - sep and end - indicating separator and end'
+
 def test_squared_power_list_named_arg_key():
     with pytest.raises(Exception):
             session5.time_it(session5.squared_power_list, 2, start=0, repetitons = 10), 'squared_power_list must have named arguments - start and end - indicating start and end of power'
