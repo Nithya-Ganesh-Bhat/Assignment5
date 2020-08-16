@@ -33,7 +33,9 @@ def time_it(fn, *args, repetitons= 1, **kwargs):
         endtime = timer()
         avgtime = (endtime-starttime)/repetitons
     if (fn==print):
-        dict = kwargs
+        dict = kwargs        
+        if('sep' not in dict.keys() or 'end' not in dict.keys()):
+            raise Exception("print must have named arguments - sep and end - indicating separator and end")
         sep = dict.get("sep")
         end = dict.get("end")
         starttime = timer()
@@ -42,6 +44,8 @@ def time_it(fn, *args, repetitons= 1, **kwargs):
         avgtime = (endtime-starttime)/repetitons
     if (fn==squared_power_list):
         dict = kwargs
+        if('start' not in dict.keys() or 'end' not in dict.keys()):
+            raise Exception("print must have named arguments - start and end - indicating start and end")
         start = dict.get("start")
         end = dict.get("end")
         starttime = timer()
@@ -50,6 +54,8 @@ def time_it(fn, *args, repetitons= 1, **kwargs):
         avgtime = (endtime-starttime)/repetitons
     if (fn==speed_converter):
         starttime = timer()
+        if('dist' not in kwargs.keys() or 'time' not in kwargs.keys()):
+            raise Exception("print must have named arguments - dist and time - indicating dist and time")
         speed_conv = speed_converter(*args,kwargs['dist'],kwargs['time'],repetitons)
         endtime = timer()
         avgtime = (endtime-starttime)/repetitons
