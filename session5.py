@@ -39,7 +39,7 @@ def time_it(fn, *args, repetitons= 1, **kwargs):
         sep = dict.get("sep")
         end = dict.get("end")
         starttime = timer()
-        val_print = cus_print(*args,sep=sep,end=end,rep=repetitons)
+        val_print = print(*args,sep=sep,end=end,rep=repetitons)
         endtime = timer()
         avgtime = (endtime-starttime)/repetitons
     if (fn==squared_power_list):
@@ -99,7 +99,7 @@ def temp_converter(temp, temp_given_in, repetitons):
             temparature = (temp * 9/5) + 32 #Celcius to Fahrenheit
     return temparature
 
-def cus_print(*args,sep,end,rep=1):
+def print(*args,sep,end,rep=1):
     sep=sep
     end=end
     for i in range(rep):
