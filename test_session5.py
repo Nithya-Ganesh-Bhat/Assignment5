@@ -107,6 +107,10 @@ def test_speed_converter_named_arg_count():
 def test_squared_power_list_named_arg_count():
     with pytest.raises(Exception):
             session5.time_it(session5.squared_power_list, 100, start=0, end=3, value=10, repetitons = 10), 'squared_power_list must have only two named arguments - start, end'
+            
+def test_print_named_arg_count():
+    with pytest.raises(Exception):
+            session5.time_it(session5.print, 1,2,3, sep='-', end=' ***\n', value=10, repetitons = 10), 'print must have only two named arguments - sep, end'
 
 def test_polygon_area_named_arg_key():
     with pytest.raises(Exception):
